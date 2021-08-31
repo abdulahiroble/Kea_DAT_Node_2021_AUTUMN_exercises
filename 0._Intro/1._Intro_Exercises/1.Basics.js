@@ -9,6 +9,8 @@ const lastName = "Latif";
 // show in the console
 // My first name is Anders and my last name is Latif
 
+console.log(`My name is ${firstName} and my lastname is ${lastName}`)
+
 
 // --------------------------------------
 // Exercise 2 - Numbers and Strings
@@ -20,5 +22,8 @@ const number = 1;
 // The result should be 2021
 // You cannot touch line 1 or 2
 
+const convert = parseInt(year)
+
+console.log(`${convert + number}`)
 
 // --------------------------------------
