@@ -4,6 +4,25 @@
 
 [Learn More about Node.js](https://nodejs.org/en/)
 
-**Bold**
+## Git - How to
 
-*Cursive*
+Get my repository
+
+```
+git clone https://github.com/anderslatif/Kea_DAT_Node_2021_AUTUMN
+```
+
+Get my updates (in the folder run the following):
+
+```
+git pull
+```
+
+In your own repository to add files to the Github server: 
+
+```
+git add [file/folder/Or -A for all]
+git commit -m "[message]"
+git push
+```
+
