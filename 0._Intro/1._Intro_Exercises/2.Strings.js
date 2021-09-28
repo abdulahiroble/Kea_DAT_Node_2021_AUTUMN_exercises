@@ -21,29 +21,20 @@ console.log(sum1);
 const anotherNumberOne = "1.10";
 const anotherNumberTwo = "2.30";
 
-const sum2 = (parseFloat(anotherNumberOne) + parseFloat(numberTwo)).toFixed(2);
+const sum2 = (parseFloat(anotherNumberOne) + parseFloat(numberTwo) ).toFixed(2);
 
 console.log(sum2);
 
 // --------------------------------------
 // Exercise 5 - Decimals and average
 
-// const one = 10;
-// const two = 45;
-// const three = 98;
-
-// Show in the console the avg. with 5 decimals
-
 const one = 10;
 const two = 45;
 const three = 98;
 
-const result = one + two + three / 3
-
-// const sum2 = result.toFixed(5);
+// Show in the console the avg. with 5 decimals
 
 
-console.log(result.toFixed(5));
 
 
 
@@ -52,8 +43,6 @@ console.log(result.toFixed(5));
 
 const letters = "abc";
 // Get me the character "c"
-
-console.log(letters.charAt(2))
 
 
 
@@ -64,8 +53,6 @@ console.log(letters.charAt(2))
 const fact = "You are learning javascript!";
 
 // capitalize the J in Javascript
-
-console.log(fact.replace("javascript", "Javascript"))
 
 
 // --------------------------------------

@@ -9,8 +9,14 @@ const lastName = "Latif";
 // show in the console
 // My first name is Anders and my last name is Latif
 
-console.log(`My name is ${firstName} and my lastname is ${lastName}`)
+console.log("My first name is", firstName, "and my last name is", lastName);
+console.log(`My first name is ${firstName} and my last name is ${lastName}`);
 
+console.log('"Simon"');
+console.log("Thomas'");
+console.log(`"R'a"s"m'u"s`);
+
+// type coercion
 
 // --------------------------------------
 // Exercise 2 - Numbers and Strings
@@ -22,8 +28,14 @@ const number = 1;
 // The result should be 2021
 // You cannot touch line 1 or 2
 
-const convert = parseInt(year)
+// const newYear = parseInt(year) + number;
+// const newYear = Number(year) + number;
+const newYear = +year + number;
 
-console.log(`${convert + number}`)
+console.log(newYear);
+
+console.log(parseInt("102a43434")); // parses as 102 stops before a
+console.log(Number("102a")); // this is obviously not a Number so 102
+
 
 // --------------------------------------
