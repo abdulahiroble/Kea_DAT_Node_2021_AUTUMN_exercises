@@ -1,9 +1,12 @@
 {
   "scripts": {
-    "start": "PORT=8080 node app.js",
+    "start": "cross-env NODE_ENV=DEV PORT=8080 node app.js",
     "showdirectorycontent": "ls"
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
