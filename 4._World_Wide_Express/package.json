@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "PORT=8080 node app.js",
+    "showdirectorycontent": "ls"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
