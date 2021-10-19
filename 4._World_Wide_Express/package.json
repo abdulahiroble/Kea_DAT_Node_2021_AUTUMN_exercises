@@ -1,7 +1,9 @@
 {
   "scripts": {
-    "start": "cross-env NODE_ENV=DEV PORT=8080 node app.js",
-    "showdirectorycontent": "ls"
+    "start-dev": "cross-env NODE_ENV=DEV PORT=8080 nodemon app.js",
+    "megascript": "npm run showappcontent & npm run showdirectorycontent",
+    "showdirectorycontent": "ls",
+    "showappcontent": "cat app.js"
   },
   "dependencies": {
     "express": "^4.17.1"
