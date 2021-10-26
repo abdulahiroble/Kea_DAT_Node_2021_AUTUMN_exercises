@@ -15,7 +15,6 @@ app.get("/projects", (req, res) => {
     res.sendFile(__dirname + "/public/projects/projects.html");
 });
 
-
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, (error) => {
