@@ -12,20 +12,43 @@
 // Promise states:
 // pending
 // fulfilled 
-    // resolved / rejected
+// resolved / rejected
 
-new Promise((resolve, reject) => {
-    setTimeout(() => {
-        try {
-            throw new Error("shoot");
-            resolve("Everyting went well");
-        } catch {
-            reject("OH NO!");
-        }
-    }, 4000);
-})
-.then(message => console.log("The message is:", message))
-.catch(errorMessage => console.log("Error was:", errorMessage));
+// new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         try {
+//             throw new Error("shoot");
+//             resolve("Everyting went well");
+//         } catch {
+//             reject("OH NO!");
+//         }
+//     }, 4000);
+// })
+//     .then(message => console.log("The message is:", message))
+//     .catch(errorMessage => console.log("Error was:", errorMessage));
 
 /* task Create a promise that resolves with "Noice" or rejects with "Damn" */
 // no need to handle the promise
+
+function nodeIsAMood() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            try {
+                resolve("Noice")
+            } catch {
+                reject("damn")
+            }
+        }, 3000)
+    })
+}
+
+nodeIsAMood()
+    .then(console.log())
+    .catch(console.log())
+
+async function async() {
+    const message = await nodeIsAMood()
+    console.log(message)
+}
+
+async()

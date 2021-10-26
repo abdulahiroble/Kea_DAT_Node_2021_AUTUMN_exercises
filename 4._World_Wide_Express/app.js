@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+
 app.use(express.static("public"));
 
 
@@ -37,6 +39,12 @@ app.get("/sausage", (req, res) => {
     }
 });
 
+app.get("/proxy", async (req, res) => {
+    fetch('https://google.com')
+        .then(res => res.text())
+        .then(text => console.log(text))
+});
+
 
 
 // task allow the developer to set the port 
@@ -49,3 +57,5 @@ const server = app.listen(PORT, (error) => {
     }
     console.log("Server is running on port", server.address().port);
 });
+
+console.log("Last line of app.js")
