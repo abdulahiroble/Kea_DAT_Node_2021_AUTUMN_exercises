@@ -2,7 +2,6 @@ fetch("/api/projects")
 .then(response => response.json())
 .then(({ projects }) => {
     const projectsWrapperDiv = document.getElementById("projects-wrapper");
-    console.log(projectsWrapperDiv);
 
     projects.map(project => { 
         const projectDiv = document.createElement("div");
