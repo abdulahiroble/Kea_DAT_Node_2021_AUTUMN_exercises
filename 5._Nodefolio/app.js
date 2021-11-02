@@ -5,26 +5,36 @@ app.use(express.static("public"));
 
 /* Import and use routes */
 const projectsRouter = require("./routers/projects.js");
+const pagesRouter = require("./routers/pages.js")
+
 app.use(projectsRouter.router);
+app.use(pagesRouter.router);
 
-/* Read the HTML files */
-const fs = require("fs");
-const nav = fs.readFileSync("./public/components/nav/nav.html", "utf8");
-const footer = fs.readFileSync("./public/components/footer/footer.html", "utf8");
 
-const frontpage = fs.readFileSync("./public/pages/frontpage/frontpage.html", "utf8");
-const projects = fs.readFileSync("./public/pages/projects/projects.html", "utf8");
+const { createPage } = require("./render.js");
 
 /* Ready the pages */
-const frontpagePage = nav + frontpage + footer;
-const projectsPage = nav + projects + footer;
+const frontpagePage = createPage("frontpage/frontpage.html", { 
+        title: "Nodefolio | Welcome"
+});
+const CVPage = createPage("CVPage/CVPage.html");
+const projectsPage = createPage("projects/projects.html");
+const contactPage = createPage("contact/contact.html");
 
 app.get("/", (req, res) => {
     res.send(frontpagePage);
 });
 
+app.get("/cv", (req, res) => {
+    res.send(CVPage);
+});
+
 app.get("/projects", (req, res) => {
     res.send(projectsPage);
+});
+
+app.get("/contact", (req, res) => {
+    res.send(contactPage);
 });
 
 const PORT = process.env.PORT || 8080;
